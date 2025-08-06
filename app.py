@@ -1,6 +1,51 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit as st
+import pandas as pd
+import joblib
+import matplotlib.pyplot as plt
+from prophet.plot import plot_plotly
+
+# 🔼 2. Load the trained model
+@st.cache_resource
+def load_model():
+    return joblib.load("ml/sales_forecast_model.pkl")
+
+model = load_model()
+
+# 🔽 3. Streamlit UI starts here
+st.title("📊 Walmart Retail Dashboard")
+st.write("Welcome to the AI-powered sales forecasting dashboard!")
+
+# (Optional) Existing charts or overview code...
+
+# 🔽 4. Forecasting Section (Place this here!)
+st.markdown("---")
+st.subheader("🔮 Predict Future Sales")
+
+# Slider input
+n_days = st.slider("Select number of future days to forecast:", min_value=7, max_value=90, step=7, value=30)
+
+# Button to trigger prediction
+if st.button("Predict Future Sales"):
+    # Step 1: Create future dates
+    future = model.make_future_dataframe(periods=n_days)
+
+    # Step 2: Predict
+    forecast = model.predict(future)
+
+    # Step 3: Success Message
+    st.success(f"Forecast generated for the next {n_days} days.")
+
+    # Step 4: Table Output
+    st.write("📋 Predicted Sales:")
+    st.dataframe(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_days))
+
+    # Step 5: Chart Output
+    st.write("📉 Forecast Chart:")
+    fig = plot_plotly(model, forecast)
+    st.plotly_chart(fig, use_container_width=True)
 
 # Load data
 data = pd.read_csv("data/walmart_full_dataset.csv")
