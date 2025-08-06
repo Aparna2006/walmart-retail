@@ -1,0 +1,16 @@
+Product,Category,Sales,Stock,Discount (%),Store ID,Date
+Milk,Dairy,560,34,10.5,Store-4,2023-02-12
+Chips,Snacks,230,58,5.0,Store-2,2023-07-25
+Soap,Personal Care,185,40,8.2,Store-7,2023-03-30
+Juice,Beverages,340,67,12.0,Store-1,2024-01-18
+Eggs,Dairy,890,23,6.5,Store-5,2024-08-11
+Bread,Bakery,430,18,2.0,Store-3,2024-05-10
+Butter,Dairy,710,10,15.0,Store-9,2024-04-20
+Cookies,Snacks,510,38,9.9,Store-6,2023-11-14
+Detergent,Cleaning,670,25,11.5,Store-8,2023-10-01
+Rice,Grains,845,50,3.5,Store-10,2024-02-27
+Soda,Beverages,390,80,6.0,Store-1,2023-08-06
+Toothpaste,Personal Care,220,44,4.5,Store-2,2023-09-15
+Oil,Grocery,730,60,5.5,Store-3,2023-12-09
+Cheese,Dairy,600,30,7.0,Store-4,2024-03-18
+Yogurt,Dairy,470,12,3.0,Store-6,2024-06-12
