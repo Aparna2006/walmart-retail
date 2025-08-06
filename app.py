@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
+import plotly.graph_objs as go
 from prophet.plot import plot_plotly
 
 # 🔼 2. Load the trained model
