@@ -17,7 +17,7 @@ This project uses **Streamlit** to visualize Walmart sales data interactively. I
 git clone https://github.com/your-username/walmart-ai-retail-dashboard.git
 cd walmart-ai-retail-dashboard
 pip install -r requirements.txt
-streamlit run app.py.
+streamlit run app.py
 
 
 ```bash
