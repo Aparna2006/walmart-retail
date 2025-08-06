@@ -1,4 +1,4 @@
-# Walmart AI Retail Dashboard 🛒
+# Walmart AI Retail Dashboard 🛒(https://walmart-retail-waeefhgps32zszggpqsu2k.streamlit.app/)
 
 This project uses *Streamlit* to visualize Walmart sales data interactively. It includes:
 
